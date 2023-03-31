@@ -1,0 +1,663 @@
+@charset "UTF-8";
+/*Importación*/
+#menudisplay {
+  display: flex;
+  width: 600px;
+  height: 430px;
+  margin: auto;
+  background-color: pink;
+}
+
+section img {
+  width: 0px;
+  flex-grow: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+section img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+#menu-boton {
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  background: transparent;
+  gap: 0.65rem;
+}
+
+button > div {
+  background: black;
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform-origin: left;
+}
+
+button:hover div:first-child {
+  transform: rotate(45deg);
+}
+
+button:hover div:nth-child(2) {
+  opacity: 0;
+}
+
+button:hover div:last-child {
+  transform: rotate(-45deg);
+}
+
+/*Pseudoclases*/
+.links-menu {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: yellow;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid pink;
+}
+
+.links-menu:hover {
+  color: pink;
+  transform: scale(1.1);
+  outline: 2px solid lightgoldenrodyellow;
+  box-shadow: 4px 5px 17px -4px lightgoldenrodyellow;
+}
+
+.links-menu::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: lightgoldenrodyellow;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.links-menu:hover::before {
+  width: 250%;
+}
+
+button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: yellow;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid lightgoldenrodyellow;
+}
+
+button:hover {
+  color: pink;
+  transform: scale(1.1);
+  outline: 2px solid;
+  box-shadow: 4px 5px 17px -4px;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: lightgoldenrodyellow;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+
+/*Creacion de Variables*/
+/*Variables Globales*/
+/*Anidación*/
+header {
+  font-family: "Roboto", sans-serif;
+  background-color: pink;
+}
+header nav {
+  padding: 25px;
+}
+header nav ul {
+  list-style-type: none;
+}
+header nav ul li a {
+  color: yellow;
+}
+
+/*Condicional IF*/
+.caja {
+  background-color: grey;
+}
+
+/*Ciclo FOR*/
+h1 {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 4rem;
+}
+
+h5 {
+  font-size: 5rem;
+}
+
+h6 {
+  font-size: 6rem;
+}
+
+/*Bucle Each*/
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+/*Mapas*/
+/*Extend*/
+.card23, .avatar {
+  background: #fff;
+  border-radius: 4px;
+  padding: 25px;
+}
+
+.card1 {
+  background-color: pink;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+
+/*Mixins*/
+.img23 {
+  border: 10px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.img23-avatar {
+  border: 15px solid blue;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px yellow;
+}
+
+/*Animaciones*/
+.navegacion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*padding: 1rem;*/
+  /*Gradientes*/
+  /*background-image: radial-gradient(yellow,pink);*/
+  /*background-image: radial-gradient( circle 489px at 49.3% 46.6%,  rgba(255,214,126,1) 0%, rgba(253,200,0,1) 100.2% );*/
+}
+
+.logo-banana {
+  width: 80px;
+  animation-name: logo-bananin;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  /*Transformaciones*/
+  /*transform: translate(200px,100px);*/
+}
+
+@keyframes logo-bananin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+* {
+  padding: 0;
+  text-align: center;
+  margin: 5px;
+}
+
+.body1 {
+  background-color: pink;
+}
+
+/*Ciclo FOR*/
+h1 {
+  font-size: 2rem;
+}
+
+.h2-nosotros {
+  background-color: lightgoldenrodyellow;
+}
+
+h2 {
+  font-size: 2rem;
+  background-color: pink;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+h1 {
+  margin-left: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: yellow;
+  text-align: center;
+}
+
+section {
+  margin-left: 30px;
+  text-align: center;
+  background-color: pink;
+}
+
+section article p {
+  font-size: 20px;
+  text-align: center;
+  background-color: pink;
+}
+
+.main-nosotros {
+  background-color: pink;
+}
+
+.section-nosotros {
+  background-color: lightgoldenrodyellow;
+  padding: 60px;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  margin: auto;
+  text-align: left;
+}
+
+.h1-nosotros {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+}
+
+.p-nosotros {
+  text-align: left;
+}
+
+.foto-equipo {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-equipo {
+  justify-content: center;
+}
+
+.foto-equipo p {
+  max-width: 450px;
+  margin-top: 15px;
+}
+
+.contenedora-equipo {
+  text-align: center;
+  max-width: 300px;
+  overflow: hidden;
+  background-color: lightgoldenrodyellow;
+  border-radius: 20px;
+}
+
+.contenedora-equipo img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.contenedora-equipo p {
+  text-align: left;
+}
+
+.negrita {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.articulo {
+  color: yellow;
+  text-align: center;
+  background-color: pink;
+}
+
+.contenedor-texto {
+  text-align: center;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.card-img-shop {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.card {
+  justify-content: center;
+  --bs-card-spacer-y: 0rem;
+}
+
+#articulo {
+  display: flex;
+}
+
+.links-menu {
+  text-align: right;
+  color: yellow;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+.agus-banana {
+  width: 400px;
+}
+
+#pie {
+  text-align: center;
+  background-color: pink;
+}
+
+#footer {
+  height: 50px;
+}
+
+a {
+  color: yellow;
+}
+
+main {
+  background-color: pink;
+}
+
+#main-nosotros {
+  border: 1px solid black;
+  background-image: url("../media/productos/banana1.jpg");
+  background-size: cover;
+  background-position: 0%;
+  height: 1000px;
+  width: 100%;
+}
+
+/*Selectores*/
+/*Selectores Etiqueta*/
+h1 {
+  font-size: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ol {
+  list-style-type: none;
+}
+
+/*FlexBox*/
+.flex-container {
+  border: 1px solid black;
+  background-color: #ccc;
+  padding: 10px;
+  margin: 10px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.caja {
+  width: 120px;
+  height: 120px;
+  border: 1px solid grey;
+  margin: 5px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.c1 {
+  background-color: green;
+  order: 3;
+}
+
+.c2 {
+  background-color: blue;
+  order: 2;
+}
+
+.c3 {
+  background-color: yellow;
+  order: 1;
+}
+
+/*Box-Modeling*/
+.box-modeling {
+  border: 2px solid black;
+}
+
+.box-modeling h1 {
+  font-size: 30px;
+}
+
+/*CSS GRIDS*/
+/*Grids Areas
+#grilla {
+    display: grid;
+    grid-template-areas: 
+    "nav    header      header"
+    "nav    productos   publicidad"
+    "nav    servicios   publicidad"
+    "nav    footer      footer"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 75px;
+}*/
+.border {
+  border: 1px solid black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  gap: 10px;
+}
+
+.grid-container > * {
+  background-color: lightgoldenrodyellow;
+  border: 1px solid black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+}
+
+header, footer {
+  grid-column: 1/span 3;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: pink;
+}
+
+.links-menu {
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grupo {
+  width: 500px;
+  margin: 20px auto;
+  background: black;
+  padding: 1px;
+  font-size: 20px;
+}
+
+.bi-instagram {
+  font-size: 30px;
+}
+
+#form-contact {
+  padding: 50px;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  background-color: lightgoldenrodyellow;
+}
+
+.boton-form {
+  background-color: black;
+  margin: 1rem;
+}
+
+.form-container {
+  display: grid;
+  gap: 1em;
+}
+
+.input-name {
+  margin: auto;
+  width: 350px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px lightgoldenrodyellow solid;
+}
+
+/*first and last type
+.parrafos p:first-child{
+    color: lightgoldenrodyellow;
+}
+
+.parrafos p:last-child{
+    color: lightgoldenrodyellow;
+}
+
+.elementos p:first-of-type{
+    background-color: purple;
+    color: darkblue;
+}
+.elementos :nth-child(2){
+    background-color: red;
+    color: green;
+}
+*/
+/*MediaQueries
+@media screen and (max-width: 479px){
+    #grilla{
+        height: 500px;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "productos"
+        "servicios"
+        "publicidad"
+        "pie";
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6,1fr);
+    }
+}*/
+@media screen and (min-width: 767px) {
+  .div-equipo {
+    display: flex;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 959px) {
+  .grid-container {
+    background-color: pink;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+}
+@media all and (max-width: 600px) {
+  aside, article {
+    grid-column: 1/span 3;
+  }
+  .grid-container {
+    grid-template-rows: repeat(5, 100px);
+  }
+}/*# sourceMappingURL=estilos.css.map */
